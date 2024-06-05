@@ -1,6 +1,6 @@
 import './App.css'
 // import * as THREE from 'three'
-import { Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Suspense} from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Environment, ContactShadows, OrbitControls } from '@react-three/drei'
@@ -13,7 +13,7 @@ export default function App() {
       <Router>
         <Routes>
           <Route path="/" element={
-            <>      
+            <div>      
               <Main />
               <div className="canvas-container">
                 <Canvas camera={{ position: [0, 0, 0], fov: 55 }}>
@@ -28,7 +28,7 @@ export default function App() {
                   <OrbitControls enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.2} maxPolarAngle={Math.PI / 2.2} />
                 </Canvas>
               </div>
-            </>} />
+            </div>} />
         </Routes>
       </Router>
     </>
