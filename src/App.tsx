@@ -5,7 +5,7 @@ import { Suspense} from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Environment, ContactShadows, OrbitControls } from '@react-three/drei'
 import Ironman from './lib/model'
-import Main from './layouts/main'
+import { Main, Navbar } from './layouts'
 import { isDesktop } from './utils/device'
 
 export default function App() {
@@ -30,6 +30,7 @@ export default function App() {
           <Route path="/" element={
             <div>      
               <Main />
+              <Navbar />
               <div className="canvas-container">
                 <Canvas camera={{ position: [0, 0, 0], fov: 55 }}>
                   <pointLight position={[10, 10, 10]} intensity={1.5} />
