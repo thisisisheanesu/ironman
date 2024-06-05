@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Avengero';
+  src: url('/fonts/avengero/AvengeroRegular-zvgl.ttf') format('truetype');
+}
+
+html, body {
+  background-color: #ED1D24;  
+  padding: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60%;
+}
+
+.inner-container .counter-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 1.5em;
+}
+
+.counter-row .day-counter {
+  width: 4ch;
+}
+
+.counter-row .counter {
+  width: 2.5ch;
+}
+
+.counter-description {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.main-font {
+  font-family: 'Avengero', sans-serif;
+  color: #fff;
+  opacity: 0.8;
+  line-height: 0.3;
+}
+
+.canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
