@@ -6,8 +6,23 @@ import { Canvas } from '@react-three/fiber'
 import { Environment, ContactShadows, OrbitControls } from '@react-three/drei'
 import Ironman from './lib/model'
 import Main from './layouts/main'
+import { isDesktop } from './utils/device'
 
 export default function App() {
+  // Don't show the cool stuff if not on desktop
+  if (!isDesktop()) {
+    return (
+      <div className="mobile-container">
+        <h1>Sorry!</h1>
+        <iframe src="https://giphy.com/embed/CM1rHbKDMH2BW" width="240" height="180" frameBorder="0" className="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/sad-kitten-CM1rHbKDMH2BW">via GIPHY</a></p>
+        <p>
+          The Avengers don't assemble on small screens.
+          They can only come to the 'big' screen (a desktop or laptop).
+        </p>
+      </div>
+    )
+  }
+
   return (
     <>
       <Router>
